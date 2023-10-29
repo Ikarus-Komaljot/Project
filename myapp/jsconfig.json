@@ -1,0 +1,12 @@
+// {
+//   "compilerOptions": {
+//     "paths": {
+//       "@/*": ["./src/*"]
+//     },
+    
+// // "types": ["@uploadcare/blocks/types/jsx"]
+            
+    
+//   }
+  
+// }

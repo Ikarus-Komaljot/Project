@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+  app:
+    # build: ./myapp
+    image: finalfrontend
+    container_name: frontend
+    ports:
+      - "3000:3000"
+    # command: sh -c "nginx"
+    # volumes:
+    #   - ./templates:/etc/nginx/templates
+    command: npm run dev
+    restart: unless-stopped
+
+  fastapiserver:
+    image: finallbackend
+    # build: ./FastAPI/src
+    container_name: fastAPIServer
+    ports:
+      - "8000:8000"
+    command: uvicorn main:app --host 0.0.0.0
+    restart: unless-stopped
